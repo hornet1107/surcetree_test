@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <img id="mypic" src="MacBookPro2018-2.png" width="400" height="300">
+            <script>
+            var pics_src = new Array("MacBookPro2018-2.png","iphone-xs-max-space-select-2018.png","ipad-pro-129-wi-fi-64gb-space-gray-3rd-generation.jpg");
+            var num = -1;
+
+            slideshow_timer();
+
+            function slideshow_timer(){
+                if (num == 2){
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+                setTimeout("slideshow_timer()",1000);
+            }
+            </script>
+    </body>
+</html>
